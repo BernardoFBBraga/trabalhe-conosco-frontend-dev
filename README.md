@@ -2,6 +2,16 @@
 
 # Teste Frontend
 
+O projeto foi feito em cima do boilerplate create-react-app que fornece um ambiente react bem configurado.
+
+Para rodar o projeto use o comando
+### `npm start`
+
+Para mais detalhes de como usar o create-react-app, veja o arquivo "about-create-react-app.md"
+
+
+# Descição da tarefa
+
 O teste deve ser feito para Web com layout responsivo e é uma simulação de envio de dinheiro para uma outra pessoa via cartão de crédito.
 
 Você deve fazer um ***Fork*** deste repositório e soliciar um ***Pull Request***, **com seu nome na descrição**, para nossa avaliação.
@@ -27,7 +37,7 @@ Realizar um `POST` para http://careers.picpay.com/tests/mobdev/transaction com o
 + Valor total
 
 ``` json
-{  
+{
    "card_number":"1111111111111111",
    "cvv":789,
    "value":79.9,
@@ -36,4 +46,4 @@ Realizar um `POST` para http://careers.picpay.com/tests/mobdev/transaction com o
 }
 ```
 
-## Para fins de teste, o número de cartão 1111111111111111 aprova a transação, qualquer outro recusa. 
+## Para fins de teste, o número de cartão 1111111111111111 aprova a transação, qualquer outro recusa.
