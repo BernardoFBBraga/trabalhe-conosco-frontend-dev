@@ -12,7 +12,8 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test --env=jsdom",
 		"eject": "react-scripts eject",
-		"sass": "sass --watch src/sass:src/stylesheets"
+		"sass": "sass --watch src/sass:src/stylesheets",
+		"sass-reset": "sass --update --force src/sass:src/stylesheets"
 	},
 	"devDependencies": {}
 }

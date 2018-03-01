@@ -1,10 +1,12 @@
 ![PicPay](https://user-images.githubusercontent.com/1765696/26998603-711fcf30-4d5c-11e7-9281-0d9eb20337ad.png)
 
-# Teste Frontend
+# Instruções para rodar o projeto
 
 O projeto foi feito em cima do boilerplate create-react-app que fornece um ambiente react bem configurado.
 
-Antes de rodar o projeto, gere o css usando o comando
+Após clonar o projeto, navegue até a pasta do projeto e comece instalando as dependências:
+### `npm install`
+Antes de rodar o projeto, na pasta do projeto, gere o css usando o comando
 ### `npm run sass`
 Para rodar o projeto use o comando
 ### `npm start`

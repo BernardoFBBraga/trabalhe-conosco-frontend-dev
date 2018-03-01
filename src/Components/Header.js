@@ -1,6 +1,6 @@
+import React from 'react';
 import '../stylesheets/Header.css';
 
-import React from 'react';
 export default ({ headerText }) => {
 	return (
 		<header className="App-header">
@@ -8,6 +8,7 @@ export default ({ headerText }) => {
 				<img
 					style={{ width: 24, heigh: 24 }}
 					src="transparent-icon.png"
+					alt=""
 				/>
 				<VerticalLine />
 				<div className="App-title">

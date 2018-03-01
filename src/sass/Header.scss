@@ -2,13 +2,16 @@
 @import 'variables';
 
 .App-header {
+	position:fixed;
+	width:100%;
+	top:0;
   background-color: $deep-green;
   height: $header-size;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
 .App-header-text-boundary{
-	max-width: 1054px;
+	max-width: $app-max-width;
 	width:100%;
 	height:100%;
 	margin:auto;
