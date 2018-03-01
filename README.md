@@ -4,6 +4,8 @@
 
 O projeto foi feito em cima do boilerplate create-react-app que fornece um ambiente react bem configurado.
 
+Antes de rodar o projeto, gere o css usando o comando
+### `npm run sass`
 Para rodar o projeto use o comando
 ### `npm start`
 
