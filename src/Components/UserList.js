@@ -9,7 +9,7 @@ export default ({ users = [] }) => {
 				users.map(user =>
 					<UserListItem
 						key={user.id}
-						name={user.name}
+						{...user}
 					/>
 				)
 			}
