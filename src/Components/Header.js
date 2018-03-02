@@ -6,7 +6,7 @@ export default ({ headerText }) => {
 		<header className="App-header">
 			<div className="App-header-text-boundary">
 				<img
-					style={{ width: 24, heigh: 24 }}
+					className="App-header-picpay-icon"
 					src="transparent-icon.png"
 					alt=""
 				/>

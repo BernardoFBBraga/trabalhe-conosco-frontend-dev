@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header'
 import UserListContainer from './UserListContainer'
+import 'normalize.css'
 import '../stylesheets/App.css';
 
 class App extends Component {

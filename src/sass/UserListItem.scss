@@ -7,8 +7,11 @@
 
 	max-width: $app-max-width;
 	height: 120px;
-
 	padding: 0px 40px;
+	@include for-size(phone-only) {
+		height: 72px;
+		padding: 0px 16px;
+	}
 
 	background-color: $deep-blue;
 	background-image: linear-gradient(186deg, $light-blue,  $deep-blue);
@@ -22,6 +25,10 @@
 	.UserListItem-avatar {
 		width: 80px;
 		height: 80px;
+		@include for-size(phone-only) {
+			width: 54px;
+			height: 54px;
+		}
 		border: solid 2px white;
 		border-radius: 50%;
 	}
@@ -36,6 +43,9 @@
 		.UserListItem-title{
 			font-weight: 700;
 			font-size: 24px;
+			@include for-size(phone-only) {
+				font-size: 16px;
+			}
 
 			margin-bottom: 8px;
 		}
@@ -45,6 +55,10 @@
 			align-items: flex-start;
 
 			font-size: 14px;
+			@include for-size(phone-only) {
+				font-size: 12px;
+			}
+
 			font-weight: 400;
 		}
 

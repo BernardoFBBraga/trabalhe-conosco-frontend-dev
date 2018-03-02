@@ -7,6 +7,14 @@
   $light-grey: #d8d8d8;
 	$title-font-color: #474971;
 
-	$header-size: 80px;
 
 	$app-max-width: 1054px;
+
+	@mixin for-size($size) {
+		@if $size == phone-only {
+			@media (max-width: 599px) { @content; }
+		}
+	}
+
+	$header-size: 80px;
+	$header-size-phone: 32px;
