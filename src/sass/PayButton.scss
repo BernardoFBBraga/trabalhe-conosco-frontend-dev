@@ -1,0 +1,57 @@
+@import 'variables';
+
+.PayButton{
+	display:flex;
+	align-items: center;
+
+	margin-left:auto;
+
+	font-weight: bold;
+	font-family: 'Roboto';
+	font-size: 20px;
+	@include for-size(phone-only) {
+		font-size: 16px;
+	}
+}
+
+.PayButton-dollar-pagar{
+	display:flex;
+	align-items: center;
+}
+
+.PayButton-dollar-pagar::after{
+	content:'PAGAR';
+	@include for-size(phone-only) {
+		content:none;
+	}
+}
+
+.PayButton-dollar-icon{
+	border:1px solid transparent;
+	border-radius:50%;
+
+	vertical-align: middle;
+	line-height: 32px;
+	height:32px;
+	width:32px;
+	@include for-size(phone-only) {
+		line-height: 28px;
+		height:28px;
+		width:28px;
+	}
+
+	margin-right:12px;
+
+	color:$deep-blue;
+	background-image: linear-gradient(to left, $light-green, $deep-green);
+}
+
+.PayButton-angle-brackets{
+	color:$light-grey;
+	font-size: 28px;
+
+	margin-left:28px;
+	@include for-size(phone-only) {
+		margin-left:0px;
+	}
+}

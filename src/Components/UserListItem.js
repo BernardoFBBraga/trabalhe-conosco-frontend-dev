@@ -1,5 +1,6 @@
-import React, { PureComponent } from 'react';
-import '../stylesheets/UserListItem.css';
+import React, { PureComponent } from 'react'
+import '../stylesheets/UserListItem.css'
+import PayButton from './PayButton'
 
 export default class UserListItem extends PureComponent {
 	render() {
@@ -13,6 +14,9 @@ export default class UserListItem extends PureComponent {
 						username={this.props.username}
 						id={this.props.id}
 						name={this.props.name}
+					/>
+					<PayButton
+						id={this.props.id}
 					/>
 				</div>
 			</React.Fragment>
