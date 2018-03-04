@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import UserList from './UserList'
 
 export default class UserListContainer extends Component {
@@ -20,7 +20,6 @@ export default class UserListContainer extends Component {
 					users: json,
 					status: "done"
 				})
-				console.log(json)
 				return json
 			})
 			.catch(error => {

@@ -22,9 +22,9 @@ h1, h2{
 }
 
 .App-content{
-	margin-top: $header-size;
+	margin-top: $header-height;
 	@include for-size(phone-only) {
-		margin-top: $header-size-phone;
+		margin-top: $header-height-phone;
 	}
 }
 

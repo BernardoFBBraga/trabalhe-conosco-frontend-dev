@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Header from './Header'
 import UserListContainer from './UserListContainer'
 import 'normalize.css'
-import '../stylesheets/App.css';
+import '../stylesheets/App.css'
+import Payment from './Payment'
 
 class App extends Component {
 	render() {
@@ -13,10 +14,11 @@ class App extends Component {
 				/>
 				<div className="App-content">
 					<UserListContainer />
+					<Payment />
 				</div>
 			</div>
-		);
+		)
 	}
 }
 
-export default App;
+export default App

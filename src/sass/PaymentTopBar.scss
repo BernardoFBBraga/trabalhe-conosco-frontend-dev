@@ -1,0 +1,75 @@
+@import 'variables';
+
+.PaymentTopBar{
+	height: 51px;
+}
+
+// ============ Desktop ============
+
+.PaymentTopBar-desktop{
+	display: flex;
+	justify-content: space-between;
+	@include for-size(phone-only) {
+		display: none;
+	}
+	height:100%;
+	border-radius: 6px 6px 0px 0px;
+  background-color: #474971;
+}
+.PaymentTopBar-desktop-title{
+	text-align: left;
+	padding: 16px 0 16px 24px;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+	color: #ffffff;
+}
+
+.PaymentTopBar-desktop-title-user-name {
+  font-weight: bold;
+	color: $deep-green;
+}
+
+.PaymentTopBar-desktop-close{
+	margin: 18px 24px;
+	cursor: pointer;
+}
+
+// ================================
+
+// ============ Mobile ============
+
+.PaymentTopBar-mobile{
+	display: none;
+	@include for-size(phone-only) {
+		display: inline-flex;
+		align-items: center;
+		float: left;
+	}
+	height:100%;
+	padding-left: 22.5px;
+}
+
+.PaymentTopBar-mobile-angle-brackets{
+	color: $deep-green;
+	font-size: 10px;
+	padding-right: 4.5px;
+}
+
+.PaymentTopBar-mobile-back-text{
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+// ================================

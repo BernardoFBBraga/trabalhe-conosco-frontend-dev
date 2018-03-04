@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import UserListItem from './UserListItem'
-import '../stylesheets/UserList.css';
+import '../stylesheets/UserList.css'
 
 export default ({ users = [] }) => {
 	return (
@@ -9,7 +9,7 @@ export default ({ users = [] }) => {
 				users.map(user =>
 					<UserListItem
 						key={user.id}
-						{...user}
+						user={user}
 					/>
 				)
 			}

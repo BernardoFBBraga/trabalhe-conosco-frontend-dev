@@ -6,9 +6,9 @@
 	width:100%;
 	top:0;
   background-color: $deep-green;
-	height: $header-size;
+	height: $header-height;
 	@include for-size(phone-only) {
-		height: $header-size-phone;
+		height: $header-height-phone;
 	}
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
