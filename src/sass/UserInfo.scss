@@ -8,10 +8,6 @@
 .UserInfo-avatar {
 	width: 80px;
 	height: 80px;
-	@include for-size(phone-only) {
-		width: 54px;
-		height: 54px;
-	}
 	border: solid 2px white;
 	border-radius: 50%;
 }
@@ -27,25 +23,37 @@
 .UserInfo-title{
 	font-weight: 700;
 	font-size: 24px;
-	@include for-size(phone-only) {
-		font-size: 16px;
-	}
-
 	margin-bottom: 8px;
 }
 
 .UserInfo-sub-title{
 	display: flex;
 	align-items: flex-start;
-
 	font-size: 14px;
-	@include for-size(phone-only) {
-		font-size: 12px;
-	}
-
 	font-weight: 400;
 }
 
+
 .UserInfo-sub-title span{
 	margin-right: 12px;
+}
+
+/* Special sizes for the info in the mobile list */
+.UserListItem .UserInfo-title{
+	@include for-size(phone-only) {
+		font-size: 16px;
+	}
+}
+
+.UserListItem .UserInfo-sub-title{
+	@include for-size(phone-only) {
+		font-size: 12px;
+	}
+}
+
+.UserListItem .UserInfo-avatar {
+	@include for-size(phone-only) {
+		width: 54px;
+		height: 54px;
+	}
 }
