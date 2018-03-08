@@ -12,11 +12,17 @@ const payment = (state = defaultState, action) => {
 				isPaymentVisible: action.isPaymentVisible,
 				userReceivingPayment: action.userReceivingPayment,
 				screen: 'select-amount',
+				value: 0,
 			}
 		case 'NAVIGATE':
 			return {
 				...state,
 				screen: action.screen
+			}
+		case 'SET_PAYMENT_VALUE':
+			return {
+				...state,
+				value: action.value
 			}
 		default:
 			return state

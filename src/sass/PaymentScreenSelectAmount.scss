@@ -1,6 +1,32 @@
+@import 'variables';
+
 .PaymentScreenSelectAmount{
 	flex: 1 1 auto;
 	display:flex;
 	flex-direction:column;
 	justify-content: space-between;
+}
+
+.PaymentScreenSelectAmount input{
+	border: none;
+	outline: none;
+	font-family: 'Nunito Sans', sans-serif;
+  font-size: 48px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+	color: $light-grey;
+	caret-color: $deep-green;
+	background-color:transparent;
+	width:100%;
+}
+
+.horizontal-line{
+	width: 256px;
+	height: 2px;
+	background-color: $light-blue;
+	margin: 8px auto
 }
