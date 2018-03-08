@@ -36,7 +36,7 @@
 }
 
 .App-title {
-	color: $title-font-color;
+	color: $light-blue;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 20px;
 	@include for-size(phone-only) {
@@ -47,7 +47,7 @@
   font-stretch: normal;
   letter-spacing: normal;
 	text-align: left;
-	color:  $title-font-color;
+	color:  $light-blue;
 }
 
 .vertical-line-outer{
@@ -60,9 +60,9 @@
 }
 
 .vertical-line-inner{
-	border-left: 2px solid $title-font-color;
+	border-left: 2px solid $light-blue;
 	@include for-size(phone-only) {
-		border-left: 1px solid $title-font-color;
+		border-left: 1px solid $light-blue;
 	}
 	height: 100%;
 }

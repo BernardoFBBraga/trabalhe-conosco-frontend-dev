@@ -13,13 +13,11 @@ const payment = (state = defaultState, action) => {
 				userReceivingPayment: action.userReceivingPayment,
 				screen: 'select-amount',
 			}
-			break
 		case 'NAVIGATE':
 			return {
 				...state,
 				screen: action.screen
 			}
-			break
 		default:
 			return state
 	}

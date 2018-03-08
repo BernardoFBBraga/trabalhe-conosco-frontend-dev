@@ -10,7 +10,7 @@
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: calc(100% - #{$header-height});
+	height: 100%;
 	overflow: auto;
 	background-color: rgb(0,0,0); /* Fallback color */
 	background-color: rgba(0,0,0,0.4);
@@ -31,7 +31,7 @@
 	height: 472px;
 	border-radius: 8px;
 	background-color: #ffffff;
-	color:	$title-font-color;
+	color:	$light-blue;
 	@include for-size(phone-only) {
 		top: $header-height-phone;
 		width: 100%;
