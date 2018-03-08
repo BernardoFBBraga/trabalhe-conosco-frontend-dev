@@ -33,7 +33,7 @@ const DesktopTopBar = ({ name, onClose }) => {
 		</div>
 
 		<img
-			class="PaymentTopBar-desktop-close"
+			className="PaymentTopBar-desktop-close"
 			src="close-icon.svg"
 			alt="X"
 			onClick={onClose}

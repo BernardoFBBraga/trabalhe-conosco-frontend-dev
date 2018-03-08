@@ -2,25 +2,25 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { closePayment } from '../actions'
 import PaymentTopBar from './PaymentTopBar'
-import UserInfo from './UserInfo'
+import PaymentScreenContent from './PaymentScreenContent'
 import '../stylesheets/Payment.css'
 
-const Payment = ({ active, user, onClose }) => {
+const Payment = ({ active, user, onClose, screen }) => {
 	if (!active) {
 		return null
 	} else {
 		return (
 			<React.Fragment>
-				<div className="Payment-desktop-background"
+				<div className="Payment-desktop-background" //this div will not display on mobile
 					onClick={onClose}
 				/>
 				<div className="Payment">
-					<PaymentTopBar onClose={onClose} name={user.name} />
-					<div className="Payment-body">
-						<UserInfo
-							user={user}
-						/>
-					</div>
+					<PaymentTopBar
+						onClose={onClose}
+						currentScreen={screen}
+						name={user.name}
+					/>
+					<PaymentScreenContent />
 				</div>
 			</React.Fragment>
 		)

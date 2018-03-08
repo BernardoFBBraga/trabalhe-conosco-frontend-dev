@@ -21,3 +21,10 @@
 
 	$payment-top-position: 100px;
 	$payment-width: 640px;
+
+	@mixin unselectable{
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
