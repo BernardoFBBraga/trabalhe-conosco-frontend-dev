@@ -1,27 +1,27 @@
 {
-  "name": "trabalhe-conosco-frontend-dev",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "node-sass-chokidar": "0.0.3",
-    "normalize.css": "^8.0.0",
-    "npm-run-all": "^4.1.2",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-intl-currency-input": "git+https://github.com/BernardoFBBraga/react-intl-currency-input.git#master-dist",
-    "react-redux": "^5.0.7",
-    "react-scripts": "1.1.1",
-    "redux": "^3.7.2"
-  },
-  "scripts": {
-    "start-js": "react-scripts start",
-    "watch-css": "npm run build-css && node-sass-chokidar src/sass src/stylesheets -o src/stylesheets --watch --recursive",
-    "start": "npm-run-all -p watch-css start-js",
-    "build-js": "react-scripts build",
-    "build-css": "node-sass-chokidar src/sass src/stylesheets -o src/stylesheets",
-    "build": "npm-run-all build-css build-js",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "devDependencies": {}
+	"name": "trabalhe-conosco-frontend-dev",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"node-sass-chokidar": "0.0.3",
+		"normalize.css": "^8.0.0",
+		"npm-run-all": "^4.1.2",
+		"react": "^16.2.0",
+		"react-dom": "^16.2.0",
+		"react-intl-currency-input": "git+https://github.com/BernardoFBBraga/react-intl-currency-input.git#master-dist",
+		"react-redux": "^5.0.7",
+		"react-scripts": "1.1.1",
+		"redux": "^3.7.2"
+	},
+	"scripts": {
+		"start-js": "react-scripts start",
+		"watch-css": "npm run build-css && node-sass-chokidar src/sass src/stylesheets -o src/stylesheets --watch --recursive",
+		"start": "npm-run-all -p watch-css start-js",
+		"build-js": "react-scripts build",
+		"build-css": "node-sass-chokidar src/sass src/stylesheets -o src/stylesheets",
+		"build": "npm-run-all build-css build-js",
+		"test": "react-scripts test --env=jsdom",
+		"eject": "react-scripts eject"
+	},
+	"devDependencies": {}
 }
