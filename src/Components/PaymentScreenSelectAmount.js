@@ -4,7 +4,7 @@ import UserInfo from './UserInfo'
 import Button from './Button';
 import { navigateShowReceipt, setPaymentValue } from '../actions'
 import '../stylesheets/PaymentScreenSelectAmount.css'
-import IntlCurrencyInput from "react-intl-currency-input-with-max"
+import IntlCurrencyInput from "react-intl-currency-input"
 
 const currencyConfig = {
 	locale: "pt-BR",
@@ -24,7 +24,7 @@ class PaymentScreenSelectAmount extends Component {
 	handleChange = (event, value, maskedValue) => {
 		this.props.setPaymentValue(value)
 	}
-	
+
 	render() {
 		let { user, navigate, value } = this.props
 		console.log(value)
