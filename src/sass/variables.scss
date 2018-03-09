@@ -5,14 +5,15 @@
   $white: #ffffff;
   $light-green: #b4f4e5;
   $deep-green: #7de6c6;
-  $light-grey: #d8d8d8;
+	$light-grey: #d8d8d8;
+	$warning-red: #ef5778;
 
 
 	$app-max-width: 1054px;
 
 	@mixin for-size($size) {
 		@if $size == phone-only {
-			@media (max-width: 599px) { @content; }
+			@media (max-width: 639px) { @content; }
 		}
 	}
 

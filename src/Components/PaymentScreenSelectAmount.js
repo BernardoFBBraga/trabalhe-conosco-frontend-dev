@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import UserInfo from './UserInfo'
 import Button from './Button';
-import { navigateShowReceipt, setPaymentValue } from '../actions'
+import CreditCardSelector from './CreditCardSelector';
+import { navigateShowReceipt, navigateSelectCard, navigateAddCard, setPaymentValue } from '../actions'
 import '../stylesheets/PaymentScreenSelectAmount.css'
 import IntlCurrencyInput from "react-intl-currency-input"
 
@@ -26,26 +27,33 @@ class PaymentScreenSelectAmount extends Component {
 	}
 
 	render() {
-		let { user, navigate, value } = this.props
-		console.log(value)
+		let { user, value, selectedCard, navigateShowReceipt, navigateSelectCard, navigateAddCard, } = this.props
 		return (
 			<div className="PaymentScreenSelectAmount">
 				<UserInfo
 					user={user}
 				/>
-				<div>
+				<div className="PaymentScreenSelectAmount-input">
 					<IntlCurrencyInput
 						defaultValue={value}
 						currency="BRL"
 						config={currencyConfig}
 						onChange={this.handleChange}
+						autoFocus={true}
 						max={100000}
 					/>
-					<div className="horizontal-line" />
+					<div className="horizontal-line-blue" />
+				</div>
+				<div className="horizontal-line-grey" />
+				<div className="PaymentScreenSelectAmount-credit-card-selector">
+					<CreditCardSelector
+						selectedCard={selectedCard}
+						navigateSelectCard={selectedCard ? navigateSelectCard : navigateAddCard}
+					/>
 				</div>
 				<Button
 					text="PAGAR"
-					onClick={navigate}
+					onClick={selectedCard ? navigateShowReceipt : navigateAddCard}
 					fullWidth
 				/>
 			</div>
@@ -55,11 +63,14 @@ class PaymentScreenSelectAmount extends Component {
 
 const mapStateToProps = (state) => ({
 	user: state.userReceivingPayment,
+	selectedCard: state.selectedCard,
 	value: state.value,
 })
 
 const mapDispatchToProps = (dispatch) => ({
-	navigate: () => dispatch(navigateShowReceipt()),
+	navigateShowReceipt: () => dispatch(navigateShowReceipt()),
+	navigateSelectCard: () => dispatch(navigateSelectCard()),
+	navigateAddCard: () => dispatch(navigateAddCard()),
 	setPaymentValue: (value) => dispatch(setPaymentValue(value)),
 })
 

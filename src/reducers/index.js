@@ -2,6 +2,7 @@ const defaultState = {
 	screen: 'select-amount', //possible states: 'select-amount', 'add-card', 'select-card', 'show-receipt'
 	isPaymentVisible: false,
 	userReceivingPayment: undefined,
+	value: 0,
 }
 const payment = (state = defaultState, action) => {
 	switch (action.type) {

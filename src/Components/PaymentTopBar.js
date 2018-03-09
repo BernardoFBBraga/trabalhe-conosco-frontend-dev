@@ -1,6 +1,5 @@
 import React from 'react'
 import '../stylesheets/PaymentTopBar.css'
-//import logo from './logo.svg';
 
 //PaymentTopBar has a title and an X button when on Desktop, but is just the back button on Mobile
 const PaymentTopBar = ({ name, onClose }) => {
