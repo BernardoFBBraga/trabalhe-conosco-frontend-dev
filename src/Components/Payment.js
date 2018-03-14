@@ -19,6 +19,7 @@ const Payment = ({ active, user, onClose, screen }) => {
 						onClose={onClose}
 						currentScreen={screen}
 						name={user.name}
+						screen={screen}
 					/>
 					<PaymentScreenContent />
 				</div>
@@ -31,6 +32,7 @@ const Payment = ({ active, user, onClose, screen }) => {
 const mapStateToProps = (state) => ({
 	active: state.isPaymentVisible,
 	user: state.userReceivingPayment,
+	screen: state.screen,
 })
 
 const mapDispatchToProps = (dispatch) => ({

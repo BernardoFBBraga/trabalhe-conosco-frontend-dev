@@ -44,18 +44,20 @@ class PaymentScreenSelectAmount extends Component {
 					/>
 					<div className="horizontal-line-blue" />
 				</div>
-				<div className="horizontal-line-grey" />
-				<div className="PaymentScreenSelectAmount-credit-card-selector">
-					<CreditCardSelector
-						selectedCard={selectedCard}
-						navigateSelectCard={selectedCard ? navigateSelectCard : navigateAddCard}
+				<div className="PaymentScreenSelectAmount-footer">
+					<div className="horizontal-line-grey" />
+					<div className="PaymentScreenSelectAmount-credit-card-selector">
+						<CreditCardSelector
+							selectedCard={selectedCard}
+							navigateSelectCard={selectedCard ? navigateSelectCard : navigateAddCard}
+						/>
+					</div>
+					<Button
+						text="PAGAR"
+						onClick={selectedCard ? navigateShowReceipt : navigateAddCard}
+						fullWidth
 					/>
 				</div>
-				<Button
-					text="PAGAR"
-					onClick={selectedCard ? navigateShowReceipt : navigateAddCard}
-					fullWidth
-				/>
 			</div>
 		)
 	}

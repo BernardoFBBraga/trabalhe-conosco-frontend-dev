@@ -1,0 +1,116 @@
+@import 'variables';
+$unused-input-text: #acb1bd;
+$unused-input-underline: #dae1f0;
+
+/* =========================================== CONTAINER =========================================== */
+/* This is the overall style for the Input component (which includes an input component and a label) */
+.Input {
+	position: relative;
+	width:100%;
+	margin-bottom: 40px;
+
+	font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+	text-align: left;
+	color: $unused-input-text;
+}
+
+/* ============================ INPUT ============================  */
+/* This is the style for the html input inside the Input component */
+.Input input {
+	width: 100%;
+  padding: 4px 0px;
+  display: block;
+  border: none;
+	border-bottom: 1px solid $unused-input-underline;
+
+	font-weight: normal;
+	font-size: 16px;
+
+	background: transparent;
+}
+
+.Input input:focus, .Input input:valid{
+	outline: none;
+
+	border-bottom: 1px solid $light-blue;
+	@include for-size(phone-only) {
+		border-bottom: 1px solid  $deep-green;
+	}
+}
+
+.Input input{
+	color: black;
+	@include for-size(phone-only) {
+		color: white;
+	}
+}
+
+/* ========================================== LABEL ======================================================== */
+/* This is the label that acts as a placeholder and moves to the top of the input when the input is selected */
+.Input label 				 {
+  position: absolute;
+  pointer-events: none;
+	left: 0px;
+	bottom: 4px;
+
+	font-size: 16px;
+	font-weight: 300;
+
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* Active state of the label */
+.Input input:focus ~ label, .Input input:valid ~ label 		{
+  bottom: 30px;
+	font-size: 12px;
+	font-weight: bold;
+
+	@include for-size(phone-only) {
+		color: $deep-green;
+	}
+  color: $light-blue;
+}
+
+/* ============================  BOTTOM BARS ============================ */
+.Input-underlying-bar 	{
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.Input-underlying-bar:before, .Input-underlying-bar:after 	{
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background:  $light-blue;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.Input-underlying-bar:before {
+  left: 50%;
+}
+
+.Input-underlying-bar:after {
+  right: 50%;
+}
+
+/* Active state of the underlying bars. They animate the width because of the transitions defined above */
+.Input input:focus ~ .Input-underlying-bar:before, .Input input:focus ~ .Input-underlying-bar:after {
+  width: 50%;
+}
+.Input input:valid ~ .Input-underlying-bar:before, .Input input:valid ~ .Input-underlying-bar:after {
+	background:  $light-blue;
+	@include for-size(phone-only) {
+		background: $deep-green;
+	}
+}

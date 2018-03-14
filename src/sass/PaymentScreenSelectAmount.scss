@@ -3,8 +3,9 @@
 .PaymentScreenSelectAmount{
 	flex: 1 1 auto;
 	display:flex;
-	flex-direction:column;
+	flex-direction: column;
 	align-items: center;
+	justify-content: space-between
 }
 
 .PaymentScreenSelectAmount-input{
@@ -29,10 +30,15 @@
 	width:100%;
 	padding:0px;
 }
-
+.PaymentScreenSelectAmount-footer{
+	align-self:stretch;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
 .PaymentScreenSelectAmount-credit-card-selector{
 	margin-top: 20px;
-	margin-bottom:4px;
+	margin-bottom: 4px;
 }
 
 .horizontal-line-blue{
@@ -44,10 +50,11 @@
 
 .horizontal-line-grey{
 	flex-shrink: 0;
-	width: 560px;
+	width: 100%;
+	padding: 0px 24px;
 
 	@include for-size(phone-only) {
-		width: 327px;
+		padding: 0px 24px;
 	}
 	height: 1px;
 	background-color: $light-grey;
